@@ -1,0 +1,270 @@
+[{
+	"id": 0,
+    "question": "What is the size of an int data type?",
+    "a": "4 Bytes",
+    "b": "8 Bytes",
+    "c": "Depends on the system/compiler",
+    "d": "Cannot be determined",
+    "answer": "Depends on the system/compiler"
+},
+{
+	"id": 1,
+    "question": "Switch statement accepts.",
+    "a": "int",
+    "b": "char",
+    "c": "long",
+    "d": "all of the mentioned",
+    "answer": "all of the mentioned"
+},
+{
+	"id": 2,
+    "question": "All keywords in C are in which form?",
+    "a": "LowerCase letters",
+    "b": "UpperCase letters",
+    "c": "CamelCase letters",
+    "d": "None of the mentioned",
+    "answer": "LowerCase letters"
+},
+{
+	"id": 3,
+    "question": "What is the output of this C code?\n#include <stdio.h>\nint main()\n{\n    j = 10;\n    printf(\"%d\\n\", j++);\n    return 0;\n}",
+    "a": "10",
+    "b": "11",
+    "c": "Compile time error",
+    "d": "0",
+    "answer": "Compile time error"
+},
+{
+	"id": 4,
+    "question": "Pick the odd one out.",
+    "a": "integer, character, boolean, floating",
+    "b": "enumeration, classes",
+    "c": "integer, enum, void",
+    "d": "arrays, pointer, classes",
+    "answer": "integer, enum, void"
+},
+{
+	"id": 5,
+    "question": "How are many sequences of statements present in c++?",
+    "a": "4",
+    "b": "3",
+    "c": "5",
+    "d": "6",
+    "answer": "5"
+},
+{
+	"id": 6,
+    "question": "What does derived class does not inherit from the base class?",
+    "a": "constructor and destructor",
+    "b": "friends",
+    "c": "operator = () members",
+    "d": "all of the mentioned",
+    "answer": "all of the mentioned"
+},
+{
+	"id": 7,
+    "question": "Which of following is not accepted in C?",
+    "a": "static a = 10; //static as",
+    "b": "static int func (int); //parameter as static",
+    "c": "static static int a; //a static variable prefixed with static",
+    "d": "all of the mentioned",
+    "answer": "static static int a; //a static variable prefixed with static"
+},
+{
+	"id": 8,
+    "question": "What will happen when the function call operator is overloaded?",
+    "a": "It will not modify the functions",
+    "b": "It will modify the functions",
+    "c": "It will modify the object",
+    "d": "It will modify the operator to be interpreted",
+    "answer": "It will modify the operator to be interpreted"
+},
+{
+	"id": 9,
+    "question": "Which is used to throw a exception?",
+    "a": "throw",
+    "b": "try",
+    "c": "catch",
+    "d": "none of the mentioned",
+    "answer": "throw"
+},
+{
+	"id": 10,
+    "question": "How many number of pointer (*) does C have against a pointer variable declaration?",
+    "a": "7",
+    "b": "127",
+    "c": "255",
+    "d": "No limits.",
+    "answer": "No limits."
+},
+{
+	"id": 11,
+    "question": "What is the output of the code given below?\n#include <stdio.h>\nint main()\n{\n    int ary[4] = {1, 2, 3, 4};\n    int *p = ary + 3;\n    printf(\"%d\\n\", p[-2]);\n}",
+    "a": "1",
+    "b": "2",
+    "c": "Compile time error",
+    "d": "Some garbage value",
+    "answer": "2"
+},
+{
+	"id": 12,
+    "question": "Which of the following is not possible in structure?",
+    "a": "A structure variable pointing to itself",
+    "b": "A structure variable pointing to another structure variable of same type",
+    "c": "2 different type of structure variable pointing at each other",
+    "d": "None of the mentioned",
+    "answer": "None of the mentioned"
+},
+{
+	"id": 13,
+    "question": "what is the return value of fputs()?",
+    "a": "EOF if an error occurs",
+    "b": "Non-negative if no error",
+    "c": "EOF if an error occurs & Non-negative if no error",
+    "d": "None of the mentioned",
+    "answer": "EOF if an error occurs & Non-negative if no error"
+},
+{
+	"id": 14,
+    "question": "Which of the following cannot be used inside sizeof?",
+    "a": "pointers",
+    "b": "functions",
+    "c": "macro definition",
+    "d": "none of the mentioned",
+    "answer": "none of the mentioned"
+},
+{
+	"id": 15,
+    "question": "What are the parts of the literal constants?",
+    "a": "integer numerals",
+    "b": "floating-point numerals",
+    "c": "strings and boolean values",
+    "d": "all of the mentioned",
+    "answer": "all of the mentioned"
+},
+{
+	"id": 16,
+    "question": "What will happen when we use void in argument passing?",
+    "a": "It will not return value to its caller",
+    "b": "It will return value to its caller",
+    "c": "Maybe or may not be return any value to its caller",
+    "d": "None of the mentioned",
+    "answer": "It will not return value to its caller"
+},
+{
+	"id": 17,
+    "question": "Pick out the correct syntax of operator conversion.",
+    "a": "operator float()const",
+    "b": "operator float()",
+    "c": "operator const",
+    "d": "none of the mentioned",
+    "answer": "operator float()const"
+},
+{
+	"id": 18,
+    "question": "Which concepts does the Pre Increment use?",
+    "a": "call by value",
+    "b": "call by reference",
+    "c": "queue",
+    "d": "stack",
+    "answer": "call by reference"
+},
+{
+	"id": 19,
+    "question": "What is the use of the indentation in c++?",
+    "a": "distinguishes between comments and code",
+    "b": "r distinguishes between comments and outer data",
+    "c": "both a and b",
+    "d": "distinguishes between comments,code and outer data",
+    "answer": "distinguishes between comments and code"
+},
+{
+	"id": 20,
+    "question": "Which of the following is the correct order of evaluation for the given expression? a = w % x / y * z; ",
+    "a": "% / * =",
+    "b": "/ * % =",
+    "c": "= % * /",
+    "d": "* % / =",
+    "answer": "% / * ="
+},
+{
+	"id": 21,
+    "question": "What is the output of this C code?\n#include <stdio.h>\nvoid main()\n{\n    int x = 5.3 % 2;\n    printf(\"Value of x is %d\", x);\n}",
+    "a": "Value of x is 2.3",
+    "b": "Value of x is 1",
+    "c": "Value of x is 0.3",
+    "d": "Compile time error",
+    "answer": "Compile time error"
+},
+{
+	"id": 22,
+    "question": "The first and second arguments of fopen() are",
+    "a": "A character string containing the name of the file & the second argument is the mode",
+    "b": "A character string containing the name of the user & the second argument is the mode",
+    "c": "A character string containing file pointer & the second argument is the mode",
+    "d": "None of the mentioned",
+    "answer": "A character string containing the name of the file & the second argument is the mode"
+},
+{
+	"id": 23,
+    "question": "functions can return enumeration constants in c?",
+    "a": "true",
+    "b": "false",
+    "c": "depends on the compiler",
+    "d": "depends on the standard",
+    "answer": "true"
+},
+{
+	"id": 24,
+    "question": "Which of the following are incorrect syntax for pointer to structure?(Assuming struct temp{int b;}*my_struct;)",
+    "a": "*my_struct.b = 10;",
+    "b": "(*my_struct).b = 10;",
+    "c": "my_struct->b = 10;",
+    "d": "Both *my_struct.b = 10; and (*my_struct).b = 10;",
+    "answer": "*my_struct.b = 10;"
+},
+{
+	"id": 25,
+    "question": "Which of three sizes of floating point types should be used when extended precision is required?",
+    "a": "float",
+    "b": "double",
+    "c": "long double",
+    "d": "extended float",
+    "answer": "long double"
+},
+{
+	"id": 26,
+    "question": "If we start our function call with default arguments means, what will be proceeding arguments?",
+    "a": "user argument",
+    "b": "empty arguments",
+    "c": "default arguments",
+    "d": "none of the mentioned",
+    "answer": "default arguments"
+},
+{
+	"id": 27,
+    "question": "How to access the object in the class?",
+    "a": "scope resolution operator",
+    "b": "ternary operator",
+    "c": "direct member access operator",
+    "d": "none of the mentioned",
+    "answer": "direct member access operator"
+},
+{
+	"id": 28,
+    "question": "What is the output of this program?\n#include <stdio.h>\nusing namespace std;\nint main()\n{\n    char str[5] = \"ABC\";\n    cout << str[3];\n    cout << str;\n    return 0;\n}",
+    "a": "ABC",
+    "b": "ABCD",
+    "c": "AB",
+    "d": "None of the mentioned",
+    "answer": "ABC"
+},
+{
+	"id": 29,
+    "question": "The switch statement is also called as?",
+    "a": "choosing structure",
+    "b": "selective structure",
+    "c": "certain structure",
+    "d": "none of the mentioned",
+    "answer": "selective structure"
+}]

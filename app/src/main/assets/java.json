@@ -1,0 +1,270 @@
+[{
+    "id": 0,
+    "question": "What is the range of short data type in Java?",
+    "a": "-128 to 127",
+    "b": "-32768 to 32767",
+    "c": "-2147483648 to 2147483647",
+    "d": "None of the mentioned",
+    "answer": "-32768 to 32767"
+},
+{
+	"id": 1,
+    "question": "What is the range of byte data type in Java?",
+    "a": "-128 to 127",
+    "b": "-32768 to 32767",
+    "c": "-2147483648 to 2147483647",
+    "d": "None of the mentioned",
+    "answer": "-128 to 127"
+},
+{
+	"id": 2,
+    "question": "An expression involving byte, int, and literal numbers is promoted to which of these?",
+    "a": "int",
+    "b": "long",
+    "c": "byte",
+    "d": "float",
+    "answer": "int"
+},
+{
+	"id": 3,
+    "question": "What is the numerical range of a char data type in Java?",
+    "a": "-128 to 127",
+    "b": "0 to 256",
+    "c": "0 to 32767",
+    "d": "0 to 65535",
+    "answer": "0 to 65535"
+},
+{
+	"id": 4,
+    "question": "Which of these coding types is used for data type characters in Java?",
+    "a": "ASCII",
+    "b": "ISO-LATIN-1",
+    "c": "UNICODE",
+    "d": "None of the mentioned",
+    "answer": "UNICODE"
+},
+{
+	"id": 5,
+    "question": "Which of these values can a boolean variable contain?",
+    "a": "True & False",
+    "b": "0 & 1",
+    "c": "Any integer value",
+    "d": "true",
+    "answer": "True & False"
+},
+{
+	"id": 6,
+    "question": "What is the order of variables in Enum?",
+    "a": "Ascending order",
+    "b": "Descending order",
+    "c": "Random order",
+    "d": "depends on the order() method",
+    "answer": "Ascending order"
+},
+{
+	"id": 7,
+    "question": "If we try to add Enum constants to a TreeSet, what sorting order will it use?",
+    "a": "Sorted in the order of declaration of Enums",
+    "b": "Sorted in alphabetical order of Enums",
+    "c": "Sorted based on order() method",
+    "d": "Sorted in descending order of names of Enums",
+    "answer": "Sorted in the order of declaration of Enums"
+},
+{
+	"id": 8,
+    "question": "What is the output of below code snippet?\nclass A\n{\n\n}\n\nenum Enums extends A\n{\n    ABC, BCD, CDE, DEF;\n}",
+    "a": "Runtime Error",
+    "b": "Compilation Error",
+    "c": "It runs successfully",
+    "d": "EnumNotDefined Exception",
+    "answer": "Compilation Error"
+},
+{
+	"id": 9,
+    "question": "Which of the following is the advantage of BigDecimal over double?",
+    "a": "Syntax",
+    "b": "Memory usage",
+    "c": "Garbage creation",
+    "d": "Precision",
+    "answer": "Precision"
+},
+{
+	"id": 10,
+    "question": "Which of the following is not provided by BigDecimal?",
+    "a": "scale manipulation",
+    "b": "+operator",
+    "c": "rounding",
+    "d": "hashing",
+    "answer": "+operator"
+},
+{
+	"id": 11,
+    "question": "Which class is a library of functions to perform arithmetic operations of BigInteger and BigDecimal?",
+    "a": "MathContext",
+    "b": "MathLib",
+    "c": "BigLib",
+    "d": "BigContext",
+    "answer": "MathContext"
+},
+{
+	"id": 12,
+    "question": "How to identify if a timezone is eligible for DayLight Saving?",
+    "a": "useDaylightTime()of Time class",
+    "b": "useDaylightTime()of Date class",
+    "c": "useDaylightTime()of TimeZone class",
+    "d": "useDaylightTime()of DateTime class",
+    "answer": "useDaylightTime()of TimeZone class"
+},
+{
+	"id": 13,
+    "question": "Which component is responsible to optimize bytecode to machine code?",
+    "a": "JVM",
+    "b": "JDK",
+    "c": "JIT",
+    "d": "JRE",
+    "answer": "JIT"
+},
+{
+	"id": 14,
+    "question": "Which of these is long data type literal?",
+    "a": "0x99fffL",
+    "b": "ABCDEFG",
+    "c": "0x99fffa",
+    "d": "99671246",
+    "answer": "0x99fffL"
+},
+{
+	"id": 15,
+    "question": "Which of these can not be used for a variable name in Java?",
+    "a": "identifier",
+    "b": "keyword",
+    "c": "identifier & keyword",
+    "d": "none of the mentioned",
+    "answer": "keyword"
+},
+{
+	"id": 16,
+    "question": "Which of these is necessary condition for automatic type conversion in Java?",
+    "a": "The destination type is smaller than source type",
+    "b": "The destination type is larger than source type",
+    "c": "The destination type can be larger or smaller than source type",
+    "d": "None of the mentioned",
+    "answer": "The destination type is larger than source type"
+},
+{
+	"id": 17,
+    "question": "What is the error in this code?\nbyte b = 50;\nb = b * 50;",
+    "a": "b can not contain value 100, limited by its range.",
+    "b": "* operator has converted b * 50 into int, which can not be converted to byte without casting.",
+    "c": "b can not contain value 50.",
+    "d": "No error in this code",
+    "answer": "* operator has converted b * 50 into int, which can not be converted to byte without casting."
+},
+{
+	"id": 18,
+    "question": "What is Truncation is Java?",
+    "a": "Floating-point value assigned to an integer type",
+    "b": "Integer value assigned to floating type",
+    "c": "Floating-point value assigned to an Floating type",
+    "d": "Integer value assigned to floating type",
+    "answer": "Floating-point value assigned to an integer type"
+},
+{
+	"id": 19,
+    "question": "What is the output of this program?\nclass char_increment\n{\n    public static void main(String args[]) \n    {\n        char c1 = 'D';\n        char c2 = 84;\n        c2++;\n        c1++;\n        System.out.println(c1 + \" \"  + c2);\n    } \n}",
+    "a": "E U",
+    "b": "U E",
+    "c": "V E",
+    "d": "U F",
+    "answer": "E U"
+},
+{
+	"id": 20,
+    "question": "Which of these operators is used to allocate memory to array variable in Java?",
+    "a": "malloc",
+    "b": "alloc",
+    "c": "new",
+    "d": "new",
+    "answer": "c"
+},
+{
+	"id": 21,
+    "question": "Which of these is an incorrect Statement?",
+    "a": "It is necessary to use new operator to initialize an array.",
+    "b": "Array can be initialized using comma separated expressions surrounded by curly braces.",
+    "c": "Array can be initialized when they are declared.",
+    "d": "None of the mentioned",
+    "answer": "It is necessary to use new operator to initialize an array."
+},
+{
+	"id": 22,
+    "question": "What is the output of this program?\nclass array_output \n{\n    public static void main(String args[]) \n    {\n        int array_variable[][] = {{ 1, 2, 3}, { 4 , 5, 6}, { 7, 8, 9}};\n        int sum = 0;\n        for (int i = 0; i < 3; ++i)\n            for (int j = 0; j <  3 ; ++j)\n                sum = sum + array_variable[i][j];\n        System.out.print(sum / 5);\n    } \n}",
+    "a": "8",
+    "b": "9",
+    "c": "10",
+    "d": "11",
+    "answer": "9"
+},
+{
+	"id": 23,
+    "question": "Which of these is an incorrect array declaration?",
+    "a": "int arr[] = new int[5] ;",
+    "b": "int [] arr = new int[5] ;",
+    "c": "int arr[]; arr = new int[5];",
+    "d": "int arr[] = int [5] new;",
+    "answer": "int arr[] = int [5] new;"
+},
+{
+	"id": 24,
+    "question": "How to sort an array?",
+    "a": "Array.sort()",
+    "b": "Arrays.sort()",
+    "c": "Collection.sort()",
+    "d": "System.sort()",
+    "answer": "Arrays.sort()"
+},
+{
+	"id": 25,
+    "question": "Modulus operator, %, can be applied to which of these?",
+    "a": "Integers",
+    "b": "Floating–point numbers",
+    "c": "Both Integers and floating–point numbers.",
+    "d": "None of the mentioned",
+    "answer": "Both Integers and floating–point numbers."
+},
+{
+	"id": 26,
+    "question": "On applying Left shift operator, <<, on an integer bits are lost one they are shifted past which position bit?",
+    "a": "1",
+    "b": "32",
+    "c": "33",
+    "d": "31",
+    "answer": "31"
+},
+{
+	"id": 27,
+    "question": "Which of these jump statements can skip processing remainder of code in its body for a particular iteration?",
+    "a": "break",
+    "b": "return",
+    "c": "exit",
+    "d": "continue",
+    "answer": "continue"
+},
+{
+	"id": 28,
+    "question": "Which of the following is a type of polymorphism in Java?",
+    "a": "Compile time polymorphism",
+    "b": "Execution time polymorphism",
+    "c": "Multiple polymorphism",
+    "d": "Multilevel polymorphism",
+    "answer": "Compile time polymorphism"
+},
+{
+	"id": 29,
+    "question": "Which of these statements are incorrect?",
+    "a": "Assignment operators are more efficiently implemented by Java run-time system than their equivalent long forms.",
+    "b": "Assignment operators run faster than their equivalent long forms.",
+    "c": "Assignment operators can be used only with numeric and character data type.",
+    "d": "None",
+    "answer": "None"
+}]

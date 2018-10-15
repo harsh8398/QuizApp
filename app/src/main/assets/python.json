@@ -1,0 +1,270 @@
+[{
+	"id": 0,
+    "question": "Which of the following is true for variable names in Python?",
+    "a": "unlimited length",
+    "b": "all private members must have leading and trailing underscores",
+    "c": "underscore and ampersand are the only two special characters allowed",
+    "d": "none of the mentioned",
+    "answer": "unlimited length"
+},
+{
+	"id": 1,
+    "question": "The output of the line of code shown below is:\nnot(10<20) and not(10>30)",
+    "a": "True",
+    "b": "False",
+    "c": "Error",
+    "d": "No output",
+    "answer": "False"
+},
+{
+	"id": 2,
+    "question": "What is the output of the following?\nfor i in range(int(2.0)):\n    print(i)",
+    "a": "0.0 1.0",
+    "b": "0 1",
+    "c": "error",
+    "d": "none of the mentioned",
+    "answer": "0 1"
+},
+{
+	"id": 3,
+    "question": "What arithmetic operators cannot be used with strings ?",
+    "a": "+",
+    "b": "*",
+    "c": "–",
+    "d": "All of the mentioned",
+    "answer": "–"
+},
+{
+	"id": 4,
+    "question": "Suppose list1 is [2, 33, 222, 14, 25], What is list1[-1] ?",
+    "a": "Error",
+    "b": "None",
+    "c": "25",
+    "d": "2",
+    "answer": "25"
+},
+{
+	"id": 5,
+    "question": "Which of these about a dictionary is false?",
+    "a": "The values of a dictionary can be accessed using keys",
+    "b": "The keys of a dictionary can be accessed using values",
+    "c": "Dictionaries aren’t ordered",
+    "d": "Dictionaries are mutable",
+    "answer": "The keys of a dictionary can be accessed using values"
+},
+{
+	"id": 6,
+    "question": "What is returned by math.modf(1.0)?",
+    "a": "(0.0, 1.0)",
+    "b": "(1.0, 0.0)",
+    "c": "(0.5, 1)",
+    "d": "(0.5, 1.0)",
+    "answer": "(0.0, 1.0)"
+},
+{
+	"id": 7,
+    "question": "What is the use of seek() method in files?",
+    "a": "sets the file’s current position at the offset",
+    "b": "sets the file’s previous position at the offset",
+    "c": "sets the file’s current position within the file",
+    "d": "none of the mentioned",
+    "answer": "sets the file’s current position at the offset"
+},
+{
+	"id": 8,
+    "question": "Suppose B is a subclass of A, to invoke the __init__ method in A from B, what is the line of code you should write?",
+    "a": "A.__init__(self)",
+    "b": "B.__init__(self)",
+    "c": "A.__init__(B)",
+    "d": "B.__init__(self)",
+    "answer": "A.__init__(self)"
+},
+{
+	"id": 9,
+    "question": "Which of these is false about recursion?",
+    "a": "Recursive function can be replaced by a non-recursive function",
+    "b": "Recursive functions usually take more memory space than non-recursive function",
+    "c": "Recursive functions run faster than non-recursive function",
+    "d": "Recursion makes programs easier to understand",
+    "answer": "Recursive functions run faster than non-recursive function"
+},
+{
+	"id": 10,
+    "question": "What is the output of this expression, 3*1**3?",
+    "a": "27",
+    "b": "9",
+    "c": "3",
+    "d": "1",
+    "answer": "3"
+},
+{
+	"id": 11,
+    "question": "Which of the following expressions involves coercion when evaluated in Python?",
+    "a": "4.7 – 1.5",
+    "b": "7.9 * 6.3",
+    "c": "1.7 % 2",
+    "d": "3.4 + 4.6",
+    "answer": "1.7 % 2"
+},
+{
+	"id": 12,
+    "question": "Given a string example=”hello” what is the output of example.count(l)",
+    "a": "2",
+    "b": "1",
+    "c": "None",
+    "d": "0",
+    "answer": "2"
+},
+{
+	"id": 13,
+    "question": "To which of the following the “in” operator can be used to check if an item is in it?",
+    "a": "Lists",
+    "b": "Dictionary",
+    "c": "Set",
+    "d": "All of the mentioned",
+    "answer": "All of the mentioned"
+},
+{
+	"id": 14,
+    "question": "Python supports the creation of anonymous functions at runtime, using a construct called __________",
+    "a": "Lambda",
+    "b": "pi",
+    "c": "anonymous",
+    "d": "None of the mentioned",
+    "answer": "Lambda"
+},
+{
+	"id": 15,
+    "question": "How many keyword arguments can be passed to a function in a single function call?",
+    "a": "zero",
+    "b": "one",
+    "c": "zero or more",
+    "d": "one or more",
+    "answer": "zero or more"
+},
+{
+	"id": 16,
+    "question": "Which of the following functions returns a value in degrees, counterclockwise from the horizontal right?",
+    "a": "heading()",
+    "b": "degrees()",
+    "c": "position()",
+    "d": "window_height()",
+    "answer": "heading()"
+},
+{
+	"id": 17,
+    "question": "What is Instantiation in terms of OOP terminology?",
+    "a": "Deleting an instance of class",
+    "b": "Modifying an instance of class",
+    "c": "Copying an instance of class",
+    "d": "Creating an instance of class",
+    "answer": "Creating an instance of class"
+},
+{
+	"id": 18,
+    "question": "Which of the following statements is true?",
+    "a": "The standard exceptions are needed to be imported manually",
+    "b": "The standard exceptions are automatically imported into Python programs",
+    "c": "When there is a deviation from the rules of a programming language, a semantic error is thrown",
+    "d": "If any exception is thrown in try block, else block is executed",
+    "answer": "The standard exceptions are automatically imported into Python programs"
+},
+{
+	"id": 19,
+    "question": "What is the output of the following code? {a**2 for a in range(4)}",
+    "a": "{1, 4, 9, 16}",
+    "b": "{0, 1, 4, 9, 16}",
+    "c": "Error",
+    "d": "{0, 1, 4, 9}",
+    "answer": "{0, 1, 4, 9}"
+},
+{
+	"id": 20,
+    "question": "What is the value of the following expression:\n24//6%3, 24//4//2",
+    "a": "(1,3)",
+    "b": "(0,3)",
+    "c": "(1,0)",
+    "d": "(3,1)",
+    "answer": "(1,3)"
+},
+{
+	"id": 21,
+    "question": "What is the output of print 0.1 + 0.2 == 0.3?",
+    "a": "True",
+    "b": "False",
+    "c": "Machine dependent",
+    "d": "Error",
+    "answer": "False"
+},
+{
+	"id": 22,
+    "question": "Fill in the blanks: The formatting method {1:<10} represents the ___________ positional argument, _________ justified in a 10 character wide field.",
+    "a": "first, right",
+    "b": "second, left",
+    "c": "first, left",
+    "d": "second, right",
+    "answer": "second, left"
+},
+{
+	"id": 23,
+    "question": "Which of the following is the use of id() function in python?",
+    "a": "Id returns the identity of the object",
+    "b": "Every object doesn’t have a unique id",
+    "c": "Every object doesn’t have a unique id",
+    "d": "None of the mentioned",
+    "answer": "Id returns the identity of the object"
+},
+{
+	"id": 24,
+    "question": "What is the base case in the Merge Sort algorithm when it is solved recursively?",
+    "a": "n=0",
+    "b": "n=1",
+    "c": "A list of length one",
+    "d": "An empty list",
+    "answer": "A list of length one"
+},
+{
+	"id": 25,
+    "question": "Which of the following functions helps us to randomize the items of a list?",
+    "a": "seed",
+    "b": "randomise",
+    "c": "shuffle",
+    "d": "uniform",
+    "answer": "shuffle"
+},
+{
+	"id": 26,
+    "question": "What does built-in function help do in context of classes?",
+    "a": "Determines the object name of any value",
+    "b": "Determines the class identifiers of any value",
+    "c": "Determines class description of any built-in type",
+    "d": "Determines class description of any user-defined built-in type",
+    "answer": "Determines class description of any built-in type"
+},
+{
+	"id": 27,
+    "question": "Methods of a class that provide access to private members of the class are called as ______ and ______",
+    "a": "getters/setters",
+    "b": "__repr__/__str__",
+    "c": "user-defined functions/in-built functions",
+    "d": "user-defined functions/in-built functions",
+    "answer": "getters/setters"
+},
+{
+	"id": 28,
+    "question": "What is the output of the below program ?\nx = 50\ndef func(x):\n    print('x is', x)\n    x = 2\n    print('Changed local x to', x)\nfunc(x)\nprint('x is now', x)",
+    "a": "x is now 50",
+    "b": "x is now 2",
+    "c": "x is now 100",
+    "d": "None of the mentioned",
+    "answer": "x is now 50"
+},
+{
+	"id": 29,
+    "question": " Is Python code compiled or interpreted?",
+    "a": "Python code is only compiled",
+    "b": "Python code is both compiled and interpreted",
+    "c": "Python code is only interpreted",
+    "d": "Python code is neither compiled nor interpreted",
+    "answer": "Python code is both compiled and interpreted"
+}]

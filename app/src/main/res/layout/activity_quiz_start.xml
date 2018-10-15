@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizStart"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/progress_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/NumberProgressBar_Beauty_Red"
+        app:progress_max="30"
+        android:layout_marginBottom="20dp"/>
+    <!--<ProgressBar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"-->
+        <!--android:indeterminate="false"-->
+        <!--android:max="30"-->
+        <!--android:progressTint="@color/black"-->
+        <!--android:progress="0"-->
+        <!--android:id="@+id/progress_question"/>-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_no" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/options"
+        android:layout_weight="0"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/opta"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/optb"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/optc"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/optd"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="**please be sure you submit before proceeding to next questions though you can always come back to previous questions by pressing back button**"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="italic" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submitbtn"
+            android:onClick="submitClick"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Previous"
+                android:layout_weight="1"
+                android:id="@+id/prvbtn"
+                android:onClick="prevClick"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_weight="1"
+                android:id="@+id/nxtbtn"
+                android:onClick="nxtClick"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="cpp">C/C++</string>
+    <string name="java">Java</string>
+    <string name="python">Python</string>
+    <string name="php">PHP</string>
+</resources>
