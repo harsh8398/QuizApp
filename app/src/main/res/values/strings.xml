@@ -4,4 +4,17 @@
     <string name="java">Java</string>
     <string name="python">Python</string>
     <string name="php">PHP</string>
+    <string name="score_label">Your Score: </string>
+    <string name="textmoji_throwing_table">(╯°□°）╯︵ ┻━┻</string>
+    <string name="textmoji_angry">ಠ_ಠ</string>
+    <string name="textmoji_average">( ͡° ͜ʖ ͡°)</string>
+    <string name="textmoji_meh">¯\_(ツ)_/¯</string>
+    <string name="textmoji_yeah">( •_•)\n\n( •_•)>⌐■-■\n\n(⌐■_■)</string>
+    <string name="authorstr">Made with ❤️ by Harsh and Neel</string>
+    <string name="quiz_flow_notice">**please be sure you submit before proceeding to next questions although you can always come back to previous questions by pressing back button**</string>
+    <string name="submit">Submit</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="chooselang_notice">**choose the programming language***</string>
 </resources>

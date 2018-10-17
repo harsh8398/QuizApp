@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:gravity="center"
-    android:padding="20dp"
-    android:orientation="vertical">
+    android:padding="@dimen/activity_default_padding"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary" >
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="200sp"
         android:layout_weight="1"
         android:fontFamily="@font/bangers"
         android:gravity="center"
         android:text="QuizApp"
-        android:textColor="@color/blue_grey_500"
-        app:autoSizeMaxTextSize="100sp"
-        app:autoSizeMinTextSize="12sp"
-        app:autoSizeStepGranularity="2sp"
-        app:autoSizeTextType="uniform" />
+        android:textColor="@color/colorAccent"
+        android:textSize="100sp" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
@@ -37,14 +34,12 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Made with ❤️ by Harsh and Neel"
-            android:textColor="@android:color/darker_gray"
-            app:autoSizeMaxTextSize="20sp"
-            app:autoSizeMinTextSize="2.4sp"
-            app:autoSizeStepGranularity="0.4sp"
-            app:autoSizeTextType="uniform" />
+            android:text="@string/authorstr"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/small_text" />
+
     </LinearLayout>
 
 </LinearLayout>

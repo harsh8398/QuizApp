@@ -1,26 +1,21 @@
 package io.github.harsh8398.quizapp;
 
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.Point;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Display;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,14 +28,15 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class QuizStart extends AppCompatActivity {
 
-    List<Question> allQues = new ArrayList<Question>();
+    List<Question> allQues = new ArrayList<>();
     int quid = 0;
-    int score = 0;
+    float score = 0;
     int correct = 0;
     int que_submitted = 0;
     Question currentQuestion;
@@ -58,18 +54,18 @@ public class QuizStart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_start);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        lang = getIntent().getExtras().getString("lang");
+        lang = Objects.requireNonNull(getIntent().getExtras()).getString("lang");
         getSupportActionBar().setTitle(getString(getStringIdentifier(this, lang)));
 
         String filename = lang + ".json";
         getQuestions(filename);
         currentQuestion = allQues.get(quid);
 
-        questionNo = (TextView)findViewById(R.id.question_no);
+        questionNo = findViewById(R.id.question_no);
 
-        txtQuestion = (TextView)findViewById(R.id.question);
+        txtQuestion = findViewById(R.id.question);
         txtQuestion.setMovementMethod(new ScrollingMovementMethod());
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -79,13 +75,13 @@ public class QuizStart extends AppCompatActivity {
         int textHeight = size.y / 3;
         txtQuestion.setMaxHeight(textHeight);
 
-        rda = (RadioButton)findViewById(R.id.opta);
-        rdb = (RadioButton)findViewById(R.id.optb);
-        rdc = (RadioButton)findViewById(R.id.optc);
-        rdd = (RadioButton)findViewById(R.id.optd);
-        butNext = (Button)findViewById(R.id.nxtbtn);
-        butSubmit = (Button)findViewById(R.id.submitbtn);
-        queProgress = (NumberProgressBar) findViewById(R.id.progress_question);
+        rda = findViewById(R.id.opta);
+        rdb = findViewById(R.id.optb);
+        rdc = findViewById(R.id.optc);
+        rdd = findViewById(R.id.optd);
+        butNext = findViewById(R.id.nxtbtn);
+        butSubmit = findViewById(R.id.submitbtn);
+        queProgress = findViewById(R.id.progress_question);
 
         setQuestionView();
     }
@@ -159,24 +155,24 @@ public class QuizStart extends AppCompatActivity {
 
     private void setQuestionView() {
         txtQuestion.scrollTo(0, 0);
+        String qnostr = "Question " + Integer.toString(quid + 1) + " out of 30:";
         if(currentQuestion.isAnswered() == -1) {
-//            Toast.makeText(this, Integer.toString(currentQuestion.getId()), Toast.LENGTH_SHORT).show();
-            questionNo.setText("Question " + Integer.toString(quid + 1) + " out of 30:");
+            questionNo.setText(qnostr);
             txtQuestion.setText(currentQuestion.getQuestion());
             rda.setText(currentQuestion.getOptA());
             rdb.setText(currentQuestion.getOptB());
             rdc.setText(currentQuestion.getOptC());
             rdd.setText(currentQuestion.getOptD());
 
-            RadioGroup grp = (RadioGroup) findViewById(R.id.options);
+            RadioGroup grp = findViewById(R.id.options);
             for (int i = 0; i < grp.getChildCount(); i++) {
-                ((RadioButton) grp.getChildAt(i)).setTextColor(getResources().getColor(R.color.black));
+                ((RadioButton) grp.getChildAt(i)).setTextColor(Color.BLACK);
             }
             grp.clearCheck();
             butSubmit.setEnabled(true);
             quid++;
         } else {
-            questionNo.setText("Question " + Integer.toString(quid + 1) + " out of 30:");
+            questionNo.setText(qnostr);
             txtQuestion.setText(currentQuestion.getQuestion());
             rda.setText(currentQuestion.getOptA());
             rdb.setText(currentQuestion.getOptB());
@@ -184,26 +180,26 @@ public class QuizStart extends AppCompatActivity {
             rdd.setText(currentQuestion.getOptD());
 
             butSubmit.setEnabled(false);
-            RadioGroup grp = (RadioGroup) findViewById(R.id.options);
+            RadioGroup grp = findViewById(R.id.options);
             for (int i = 0; i < grp.getChildCount(); i++) {
-                if(currentQuestion.getAnswer().equals(((RadioButton) grp.getChildAt(i)).getText())) {
-                    ((RadioButton) grp.getChildAt(i)).setTextColor(getResources().getColor(R.color.green));
+                if(currentQuestion.getAnswer().contentEquals(((RadioButton) grp.getChildAt(i)).getText())) {
+                    ((RadioButton) grp.getChildAt(i)).setTextColor(Color.GREEN);
                 } else {
-                    ((RadioButton) grp.getChildAt(i)).setTextColor(getResources().getColor(R.color.black));
+                    ((RadioButton) grp.getChildAt(i)).setTextColor(Color.BLACK);
                 }
             }
             grp.clearCheck();
             RadioButton answer = (RadioButton) grp.getChildAt(currentQuestion.isAnswered());
             answer.setChecked(true);
-            if(!currentQuestion.getAnswer().equals(answer.getText())){
-                answer.setTextColor(getResources().getColor(R.color.red));
+            if(!currentQuestion.getAnswer().contentEquals(answer.getText())){
+                answer.setTextColor(Color.RED);
             }
             quid = currentQuestion.getId() + 1;
         }
     }
 
     public String loadJSONFromAsset(String filename) {
-        String json = null;
+        String json;
         try {
             InputStream is = this.getAssets().open(filename);
             int size = is.available();
@@ -279,10 +275,10 @@ public class QuizStart extends AppCompatActivity {
     }
 
     private void endQuiz() {
-        score = (int) (((float) score/30) * 5);
+        score = (score/30) * 5;
         Intent intent = new Intent(this, ResultActivity.class);
         Bundle b = new Bundle();
-        b.putInt("score", score);
+        b.putFloat("score", score);
         b.putInt("correct", correct);
         intent.putExtras(b);
         startActivity(intent);
@@ -290,7 +286,7 @@ public class QuizStart extends AppCompatActivity {
     }
 
     public void submitClick(View view) {
-        RadioGroup grp = (RadioGroup)findViewById(R.id.options);
+        RadioGroup grp = findViewById(R.id.options);
         if (grp.getCheckedRadioButtonId() == -1)
         {
             Toast.makeText(this, "Please select one of the above options", Toast.LENGTH_SHORT).show();
@@ -303,16 +299,16 @@ public class QuizStart extends AppCompatActivity {
             currentQuestion.setAnswered(grp.indexOfChild(answer));
 
             for(int i = 0; i < grp.getChildCount(); i++){
-                if(currentQuestion.getAnswer().equals(((RadioButton) grp.getChildAt(i)).getText())) {
-                    ((RadioButton) grp.getChildAt(i)).setTextColor(getResources().getColor(R.color.green));
+                if(currentQuestion.getAnswer().contentEquals(((RadioButton) grp.getChildAt(i)).getText())) {
+                    ((RadioButton) grp.getChildAt(i)).setTextColor(Color.GREEN);
                 }
             }
-            if(currentQuestion.getAnswer().equals(answer.getText())){
+            if(currentQuestion.getAnswer().contentEquals(answer.getText())){
                 score++;
                 correct++;
                 Log.d("Score", "Your score: "+score);
             } else {
-                answer.setTextColor(getResources().getColor(R.color.red));
+                answer.setTextColor(Color.RED);
             }
         }
 

@@ -184,8 +184,8 @@
     "a": "malloc",
     "b": "alloc",
     "c": "new",
-    "d": "new",
-    "answer": "c"
+    "d": "calloc",
+    "answer": "new"
 },
 {
 	"id": 21,

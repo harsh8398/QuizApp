@@ -15,6 +15,8 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 
+import java.util.Objects;
+
 public class LoginActivity extends AppCompatActivity implements
         View.OnClickListener {
 
@@ -25,8 +27,7 @@ public class LoginActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        getSupportActionBar().setTitle("Welcome");
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         findViewById(R.id.sign_in_button).setOnClickListener(this);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -45,7 +46,7 @@ public class LoginActivity extends AppCompatActivity implements
     protected void onStart() {
         super.onStart();
         // Check for existing Google Sign In account, if the user is already signed in
-// the GoogleSignInAccount will be non-null.
+        // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         updateUI(account);
     }

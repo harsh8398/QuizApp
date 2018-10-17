@@ -3,13 +3,13 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="@dimen/activity_default_padding">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/pname"
-        android:textSize="50dp"/>
+        android:textSize="@dimen/large_text"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,43 +18,47 @@
         android:gravity="bottom">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="10dp"
-            android:text="Choose your favourite programming language here..."
+            android:text="@string/chooselang_notice"
             android:textColor="@android:color/darker_gray"
-            android:textSize="20dp" />
+            android:textSize="@dimen/small_text"
+            android:layout_marginBottom="@dimen/activity_default_margin"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Java"
+            android:text="@string/java"
+            android:theme="@style/ThemeOverlay.MyDefaultButton"
             android:id="@+id/java"
             android:onClick="onClick"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="C/C++"
+            android:text="@string/cpp"
+            android:theme="@style/ThemeOverlay.MyDefaultButton"
             android:id="@+id/cpp"
             android:onClick="onClick"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Python"
+            android:text="@string/python"
+            android:theme="@style/ThemeOverlay.MyDefaultButton"
             android:id="@+id/python"
             android:onClick="onClick"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PHP"
+            android:text="@string/php"
+            android:theme="@style/ThemeOverlay.MyDefaultButton"
             android:id="@+id/php"
             android:onClick="onClick"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign Out"
-            android:layout_marginTop="20dp"
+            android:text="@string/sign_out"
+            android:layout_marginTop="@dimen/activity_default_margin"
             android:onClick="signOut"
             android:id="@+id/sign_out_button"
             android:theme="@style/ThemeOverlay.MyDarkButton"/>
