@@ -9,13 +9,15 @@
     </style>
 
     <!-- default buttons -->
-    <style name="ThemeOverlay.MyDefaultButton" parent="Theme.AppCompat.Light">
+    <style name="DefaultButton" parent="Theme.AppCompat">
+        <item name="colorControlHighlight">@color/colorPrimary</item>
         <item name="colorButtonNormal">@color/colorAccent</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 
     <!-- Dark Buttons -->
-    <style name="ThemeOverlay.MyDarkButton" parent="ThemeOverlay.AppCompat.Dark">
+    <style name="DarkButton" parent="Theme.AppCompat">
+        <item name="colorControlHighlight">@android:color/white</item>
         <item name="colorButtonNormal">@color/colorPrimary</item>
         <item name="android:textColor">@color/colorAccent</item>
     </style>
@@ -25,6 +27,17 @@
         <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
         <item name="colorControlNormal">@color/colorPrimary</item>
         <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <!-- Number Progress Bar Custom theme -->
+    <style name="NumberProgressBar_Custom">
+        <item name="progress_unreached_color">@color/light_gray</item>
+        <item name="progress_reached_color">@color/colorAccent</item>
+        <item name="progress_text_size">@dimen/small_text</item>
+        <item name="progress_text_color">@color/colorAccent</item>
+
+        <item name="progress_reached_bar_height">2dp</item>
+        <item name="progress_unreached_bar_height">1.5dp</item>
     </style>
 
 </resources>

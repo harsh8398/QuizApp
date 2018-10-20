@@ -3,18 +3,25 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="@dimen/activity_default_padding">
+    android:background="@color/light_gray"
+    android:padding="@dimen/activity_small_padding">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/pname"
+        android:background="@drawable/card_back_dark"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/activity_small_padding"
         android:textSize="@dimen/large_text"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@drawable/card_back"
+        android:padding="@dimen/activity_small_padding"
+        android:layout_marginTop="@dimen/activity_small_margin"
         android:gravity="bottom">
 
         <TextView
@@ -29,28 +36,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/java"
-            android:theme="@style/ThemeOverlay.MyDefaultButton"
+            android:theme="@style/DefaultButton"
             android:id="@+id/java"
             android:onClick="onClick"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/cpp"
-            android:theme="@style/ThemeOverlay.MyDefaultButton"
+            android:theme="@style/DefaultButton"
             android:id="@+id/cpp"
             android:onClick="onClick"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/python"
-            android:theme="@style/ThemeOverlay.MyDefaultButton"
+            android:theme="@style/DefaultButton"
             android:id="@+id/python"
             android:onClick="onClick"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/php"
-            android:theme="@style/ThemeOverlay.MyDefaultButton"
+            android:theme="@style/DefaultButton"
             android:id="@+id/php"
             android:onClick="onClick"/>
 
@@ -61,7 +68,7 @@
             android:layout_marginTop="@dimen/activity_default_margin"
             android:onClick="signOut"
             android:id="@+id/sign_out_button"
-            android:theme="@style/ThemeOverlay.MyDarkButton"/>
+            android:theme="@style/DarkButton"/>
     </LinearLayout>
 
 </LinearLayout>
