@@ -1,10 +1,13 @@
 package io.github.harsh8398.quizapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,11 +20,15 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
 
     String personName;
+    Uri photoURL;
     TextView pname;
+    int imageSize;
+    ImageView pphoto;
     GoogleApiClient mGoogleApiClient;
 
     @Override
@@ -30,8 +37,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         personName = getIntent().getExtras().getString("name");
+
         pname = (TextView) findViewById(R.id.pname);
+        pphoto = (ImageView) findViewById(R.id.pphoto);
+
+        imageSize = getDip((int) getResources().getDimension(R.dimen.large_text));
         pname.setText("Hi,\n" + personName);
+        if(getIntent().getExtras().getString("photo") != null) {
+            photoURL = Uri.parse(getIntent().getExtras().getString("photo"));
+            Picasso.get().load(photoURL)
+                    .resize(imageSize, imageSize)
+                    .transform(new CircleTransform()).into(pphoto);
+        }
     }
 
     @Override
@@ -65,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public int getDip(int pixel) {
+        float scale = getBaseContext().getResources().getDisplayMetrics().density;
+        return (int) (pixel * scale + 0.5f);
+    }
 
     public void signOut(View view) {
         Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(

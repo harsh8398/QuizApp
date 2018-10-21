@@ -3,7 +3,7 @@
     <dimen name="activity_default_padding">20dp</dimen>
     <dimen name="activity_default_margin">20sp</dimen>
     <dimen name="small_text">14sp</dimen>
-    <dimen name="large_text">50sp</dimen>
+    <dimen name="large_text">40sp</dimen>
     <dimen name="medium_text">20sp</dimen>
     <dimen name="activity_small_padding">8sp</dimen>
     <dimen name="activity_small_margin">8sp</dimen>

@@ -6,14 +6,27 @@
     android:background="@color/light_gray"
     android:padding="@dimen/activity_small_padding">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/pname"
+        android:orientation="horizontal"
         android:background="@drawable/card_back_dark"
-        android:textColor="@android:color/white"
-        android:padding="@dimen/activity_small_padding"
-        android:textSize="@dimen/large_text"/>
+        android:padding="@dimen/activity_small_padding">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pphoto"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/activity_small_margin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pname"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/large_text"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

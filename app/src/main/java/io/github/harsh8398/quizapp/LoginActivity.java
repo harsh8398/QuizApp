@@ -1,6 +1,7 @@
 package io.github.harsh8398.quizapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -86,8 +87,12 @@ public class LoginActivity extends AppCompatActivity implements
     private void updateUI(GoogleSignInAccount account) {
         if(account != null) {
             String personName = account.getDisplayName();
+            Uri photoURL = account.getPhotoUrl();
             Intent intent = new Intent(this, MainActivity.class);
             intent.putExtra("name", personName);
+            if (photoURL != null) {
+                intent.putExtra("photo", photoURL.toString());
+            }
             startActivity(intent);
             finish();
         }
