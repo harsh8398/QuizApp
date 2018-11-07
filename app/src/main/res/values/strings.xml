@@ -17,4 +17,5 @@
     <string name="next">Next</string>
     <string name="sign_out">Sign Out</string>
     <string name="chooselang_notice">**choose the programming language***</string>
+    <string name="placeh_score">3</string>
 </resources>

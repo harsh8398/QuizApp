@@ -1,20 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResultActivity"
-    android:padding="@dimen/activity_default_padding">
+    android:orientation="vertical"
+    android:padding="@dimen/activity_small_padding"
+    android:background="@color/light_gray"
+    tools:context="io.github.harsh8398.quizapp.ResultActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
-        android:padding="@dimen/activity_default_padding"
-        tools:context="io.github.harsh8398.quizapp.ResultActivity">
+        android:background="@drawable/card_back_dark"
+        android:padding="@dimen/activity_small_padding"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/score_label"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="30sp" />
 
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorAccent"
+            android:text="@string/placeh_score"
+            android:textSize="35sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_back"
+        android:layout_marginTop="@dimen/activity_small_margin"
+        android:padding="@dimen/activity_small_padding">
         <RatingBar
             android:id="@+id/score_rating"
             android:theme="@style/RatingBar"
@@ -22,47 +47,27 @@
             android:layout_height="wrap_content"
             android:isIndicator="true"
             android:numStars="5"
+            android:layout_gravity="center"
             android:rating="3"
-            android:stepSize="0.1"
-            android:layout_margin="@dimen/activity_default_margin"/>
+            android:stepSize="0.1"/>
+    </FrameLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/scoreText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/score_label"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="30sp" />
+    <TextView
+        android:id="@+id/text_emoji"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@drawable/card_back_dark"
+        android:layout_marginTop="@dimen/activity_small_margin"
+        android:padding="@dimen/activity_small_padding"
+        android:text="@string/textmoji_meh"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/large_text" />
 
-            <TextView
-                android:id="@+id/score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@android:color/holo_red_light"
-                android:textSize="35sp" />
-        </LinearLayout>
+    <TextView
+        android:id="@+id/detail_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text"/>
 
-        <TextView
-            android:id="@+id/text_emoji"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="@dimen/activity_default_padding"
-            android:text="@string/textmoji_yeah"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/medium_text"/>
-
-        <TextView
-            android:id="@+id/detail_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/medium_text"/>
-
-    </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
